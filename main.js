@@ -81,8 +81,10 @@ Thumbnail.prototype.bindEvents = function () {
 	var _this = this;
 	$(this.element).on("click", function () {
 		$('.big-image').attr('src', _this.data);
-		$(this).toggleClass("selected-thumbnail");
-		$(this).siblings().removeClass("selected-thumbnail");
+		$(this).addClass("selected");
+		// $(this).removeClass("unselected");
+		$(this).siblings().removeClass("selected");
+		// $(this).siblings().addClass("unselected");
 	});
 }
 
